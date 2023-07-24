@@ -399,6 +399,12 @@ span.videoPlay:after {
 
 /* start slick slider*/
 
+.img-area {
+    width: 100%;
+    position: relative;
+    padding: 4% 0%;
+}
+
 .img-area .slick-next {
     right: 27px;
     font-size: 30px;
@@ -406,7 +412,7 @@ span.videoPlay:after {
 
 .img-area .slick-prev {
     left: 25px;
-    z-index: 9;
+    z-index: 10;
 }
 
 .slick-prev:before,
@@ -425,33 +431,31 @@ section#serice {
 .item-service {
     display: flex;
     flex-direction: column;
-    /* width: 300px; */
-    height: 500px;
-    box-shadow: 10px 10px 50px #00000054;
+    height: 380px;
+    box-shadow: 0px 10px 50px #0000000f;
+    margin: 30px;
+}
+
+.item-service:hover img {
+    transform: scale(1.2);
 }
 
 .item-service .img-bloc {
     width: 100%;
-    height: 300px;
+    height: 200px;
+    overflow: hidden;
 }
 
 .item-service .img-bloc img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all .3s linear;
 }
 
 .item-service .btn {
     padding: 4px 15px;
     margin-top: 20px;
-}
-
-.img-area {
-    width: 100%;
-    position: relative;
-    height: 100vh;
-    /* overflow: hidden; */
-    padding: 4% 10%;
 }
 
 .item-service .description {
@@ -460,16 +464,16 @@ section#serice {
     align-items: flex-start;
     text-align: left;
     line-height: 1.7;
-    padding: 10px;
+    padding: 15px 20px;
 }
 
 .item-service .description p {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.5;
 }
 
 .item-service .description h4 {
-    font-size: 25px;
+    font-size: 24px;
 }
 
 
