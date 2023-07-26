@@ -559,7 +559,7 @@ span.videoPlay:after {
 .img-area {
     width: 100%;
     position: relative;
-    padding: 4% 0%;
+    padding: 4% 10%;
 }
 
 .img-area .slick-next {
@@ -575,6 +575,7 @@ span.videoPlay:after {
 .slick-prev:before,
 .slick-next:before {
     font-size: 30px;
+    color: var(--color1);
 }
 
 section#serice {
@@ -682,6 +683,26 @@ section#advice .title h2 {
     font-size: 5rem;
     color: var(--color0);
 }
+section#Testimony{background: url(../assets/testimony.jpg);background-size: cover;background-position: center;background-color: #000000b5;background-blend-mode: soft-light;}
+section#Testimony .title,section#Testimony .testimonial{text-align: center;color: var(--color0);font-size: 22px;}
+section#Testimony .title h2{color: var(--color0);}
+section#faq{display: flex;grid-gap: 30px;}
+section#faq .filter{display: flex;flex-direction: column;width: 50%;background: var(--color0);padding: 20px 40px;}
+
+section#faq .filter label {
+    background: var(--color1);
+    padding: 20px;
+    font-size: 25px;
+    margin-top: 20px;
+    font-weight: 700;
+    color: var(--color0);
+}
+
+section#faq .filter input {
+    display: none;
+}
+section#faq div.content{display: none;background: aliceblue;padding: 20px;}
+section#faq input[type='checkbox']:checked + div.content{display: block;}
 /* end main style */
 
 
