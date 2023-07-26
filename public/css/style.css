@@ -20,6 +20,7 @@
     justify-content: space-between;
     padding: 4% 10%;
     align-items: flex-start;
+    background: var(--color0);
 }
 
 .custom-package h4 span {
@@ -94,6 +95,7 @@ body {
     letter-spacing: var(--letter-spacing);
     font-size: 18px;
     position: relative;
+    background: #f3f3f3ab;
 }
 
 .text-bloc {
@@ -171,8 +173,12 @@ a.btn-more {
 }
 
 section {
-    padding: 4% 15%;
+    padding: 6% 15%;
     position: relative;
+}
+
+section#service {
+    background: var(--color0);
 }
 
 section#package {
@@ -193,6 +199,7 @@ section#package .container .package-item {
     min-height: 400px;
     grid-gap: 30px;
     width: 400px;
+    background: var(--color0);
 }
 
 section#package .container .package-item:nth-child(2) {
@@ -209,7 +216,7 @@ section#package .container {
 }
 
 section#steps {
-    background: aliceblue;
+    background: white;
 }
 
 section#steps .container {
@@ -541,9 +548,9 @@ span.videoPlay:after {
     position: absolute;
     width: 160px;
     height: 170px;
-    background: #edf1f3;
+    background: #ffffff;
     z-index: -1;
-    border: 10px solid var(--color0);
+    border: 10px solid #f6f6f6;
 }
 
 
@@ -590,6 +597,7 @@ section#serice {
     flex-direction: column;
     height: 380px;
     box-shadow: 0px 10px 50px #0000000f;
+    background: var(--color0);
 }
 
 .item-service:hover img {
