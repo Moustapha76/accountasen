@@ -19,3 +19,13 @@ playvid.addEventListener('click', function() {
 stopvid.addEventListener('click', function() {
     popup.style.display = "none";
 })
+
+let navbar = document.querySelector('nav.navbar')
+window.addEventListener('scroll', function() {
+    console.log(navbar)
+    if (this.scrollY > 100) {
+        navbar.classList.add('fixed')
+    } else {
+        navbar.classList.remove('fixed')
+    }
+})

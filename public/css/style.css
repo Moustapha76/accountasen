@@ -4,7 +4,7 @@
     --color0: #fff;
     --color1: #0367B0;
     --color2: #01AEEA;
-    --color3: #071227;
+    --color3: #1d1d1d;
     --color4: #043355;
     --letter-spacing: 1px;
 }
@@ -95,7 +95,7 @@ body {
     letter-spacing: var(--letter-spacing);
     font-size: 18px;
     position: relative;
-    background: #f3f3f3ab;
+    background: var(--color0);
 }
 
 .text-bloc {
@@ -148,7 +148,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--color1);
+    color: var(--color2);
 }
 
 .btn,
@@ -260,8 +260,20 @@ nav.navbar {
     align-items: center;
     color: var(--color0);
     z-index: 1;
-    margin: 4% 12%;
+    margin: 4% auto;
     height: 90px;
+    position: fixed;
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%);
+    transition: margin .3s linear;
+}
+
+.fixed {
+    margin: 0 !important;
+    width: 100% !important;
+    left: 0 !important;
+    transform: translate(0) !important;
 }
 
 nav.navbar a.logo img {
@@ -331,6 +343,7 @@ nav.navbar a.tel {
     text-align: center;
     color: var(--color0);
     position: relative;
+    height: 100vh;
 }
 
 .banner p {
@@ -504,6 +517,7 @@ section#about {
     font-size: 50px;
     line-height: 1;
     padding: 10px 0;
+    color: var(--color3);
 }
 
 .jumbotron img {
@@ -644,7 +658,17 @@ section#serice {
 
 /* end slick slider*/
 
-section#advice{display: flex;flex-direction: column;align-items: center;justify-content: center;background: url(../assets/young-african-american-businessman-making-phone-call-indoors-in-office-at-night.jpg);background-size: cover;padding: 5% 10% 20%;background-position: center;margin-bottom: 12rem;}
+section#advice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(../assets/young-african-american-businessman-making-phone-call-indoors-in-office-at-night.jpg);
+    background-size: cover;
+    padding: 5% 10% 20%;
+    background-position: center;
+    margin-bottom: 12rem;
+}
 
 section#advice .bloc .description h3 {
     font-size: 35px;
@@ -683,26 +707,197 @@ section#advice .title h2 {
     font-size: 5rem;
     color: var(--color0);
 }
-section#Testimony{background: url(../assets/testimony.jpg);background-size: cover;background-position: center;background-color: #000000b5;background-blend-mode: soft-light;}
-section#Testimony .title,section#Testimony .testimonial{text-align: center;color: var(--color0);font-size: 22px;}
-section#Testimony .title h2{color: var(--color0);}
-section#faq{display: flex;grid-gap: 30px;}
-section#faq .filter{display: flex;flex-direction: column;width: 50%;background: var(--color0);padding: 20px 40px;}
+
+section#Testimony {
+    background: url(../assets/testimony.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: #000000b5;
+    background-blend-mode: soft-light;
+}
+
+section#Testimony .title,
+section#Testimony .testimonial {
+    text-align: center;
+    color: var(--color0);
+    font-size: 22px;
+}
+
+section#Testimony .title h2 {
+    color: var(--color0);
+}
+
+section#faq {
+    display: flex;
+    grid-gap: 40px;
+}
+
+section#faq .filter {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background: #f5f5f5;
+    padding: 20px;
+}
 
 section#faq .filter label {
-    background: var(--color1);
+    background: var(--color0);
     padding: 20px;
     font-size: 25px;
-    margin-top: 20px;
+    margin: 10px;
     font-weight: 700;
-    color: var(--color0);
+    cursor: pointer;
+    color: var(--color3);
 }
 
 section#faq .filter input {
     display: none;
 }
-section#faq div.content{display: none;background: aliceblue;padding: 20px;}
-section#faq input[type='checkbox']:checked + div.content{display: block;}
+
+section#faq div.content {
+    /* background: aliceblue; */
+    display: none;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+section#faq input[type='checkbox']:checked+div.content {
+    display: block;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+
+footer .bande1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 10%;
+    background-color: var(--color1);
+    color: var(--color0);
+    font-size: 23px;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 30px;
+}
+
+footer .bande1 form {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+footer .bande1 input {
+    padding: 15px 30px;
+    width: 100%;
+    border: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+footer .bande1 input.btn {
+    width: auto;
+    background: var(--color2);
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+footer .bande1 input:focus {
+    outline: none;
+}
+
+footer .bande1 input.btn:hover {
+    background: #3498ef;
+}
+
+footer .bande2 {
+    display: flex;
+    justify-content: stretch;
+    color: var(--color0);
+    background-color: var(--color3);
+    padding: 0% 10%;
+    align-items: stretch;
+}
+
+footer .bande3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+footer .bande2 .item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    grid-gap: 20px;
+    width: 100%;
+    padding: 2% 30px;
+}
+
+footer .bande2 .item:nth-child(2) {
+    border: 1px solid #fcfcfc;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+footer .bande2 .item p {
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 2px;
+}
+
+footer .bande2 .item p span:nth-child(1) {
+    color: var(--color2);
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+footer .bande2 .item img {
+    width: 50px;
+}
+
+footer section:nth-child(2) {}
+
+footer section:nth-child(1) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 5% 12%;
+}
+
+footer section:nth-child(1) .group {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #06060633;
+    padding: 0 30px;
+}
+
+footer section:nth-child(1) .group:nth-child(1) {}
+
+footer section:nth-child(1) .group h5 {
+    font-size: 30px;
+    color: var(--color3);
+    font-weight: 100;
+    padding-bottom: 5px;
+}
+
+footer section:nth-child(1) .group ul {
+    list-style: none;
+}
+
+footer section:nth-child(1) .group ul li a {
+    color: var(--color3);
+    font-size: 17px;
+    line-height: 2;
+}
+
+
 /* end main style */
 
 
