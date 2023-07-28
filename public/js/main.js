@@ -22,7 +22,6 @@ stopvid.addEventListener('click', function() {
 
 let navbar = document.querySelector('nav.navbar')
 window.addEventListener('scroll', function() {
-    console.log(navbar)
     if (this.scrollY > 100) {
         navbar.classList.add('fixed')
     } else {
