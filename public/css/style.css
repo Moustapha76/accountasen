@@ -14,8 +14,9 @@
     padding: 0;
 }
 
-.skiptranslate iframe {
-    display: none;
+.input-group {
+    grid-gap: 20px;
+    display: flex;
 }
 
 .custom-package {
@@ -129,8 +130,100 @@ a.btn-more {
 }
 
 section {
-    padding: 6% 15%;
+    padding: 6% 10%;
     position: relative;
+}
+
+section#contact {
+    display: flex;
+    justify-content: space-evenly;
+    grid-gap: 20px;
+}
+.contact-container{display: flex;flex-direction: column;align-items: stretch;justify-content: stretch;overflow: hidden;}
+section#contact .right #form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    grid-gap: 20px;
+    background: #f4f4f4;
+    padding: 4rem 10%;
+    width: 100%;
+}
+
+section#contact .right #form .btn {
+    width: fit-content;
+}
+
+section#contact .right #form input, section#contact .right #form textarea {
+    padding: 15px 20px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    border: none;
+}
+
+section#contact .item {
+    display: flex;
+    grid-gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+section#contact .item p {
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+}
+
+section#contact .item p span:nth-child(1) {
+    font-weight: 900;
+    letter-spacing: 0;
+    font-size: 30px;
+}
+
+section#contact .item img {
+    width: 50px;
+}
+
+section#contact .title {
+    margin-bottom: 2rem;
+}
+
+section#history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 30px;
+    line-height: 1.7;
+    color: var(--color0);
+    background: var(--color3);
+}
+
+section#history .gallery {
+    display: flex;
+    grid-gap: 20px;
+}
+
+section#history .gallery .img-bloc img {
+    transition: all .3s linear;
+}
+
+section#history .gallery .img-bloc:hover img {
+    transform: scale(1.2);
+}
+
+section#history .title h2 {
+    color: var(--color2);
+}
+
+section#history .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eeeeee1c;
+    margin-bottom: 2rem;
+    text-align: justify;
 }
 
 section#service {
@@ -200,12 +293,15 @@ header {
     position: relative;
     overflow: hidden;
 }
+header.header-intern {
+    height: 65vh;
+}
 
 header:before {
     content: "";
     position: absolute;
     inset: 0;
-    background: #0000008a;
+    background: #0000009c;
     z-index: 0;
 }
 
@@ -215,7 +311,7 @@ nav.navbar {
     background: var(--color4);
     align-items: center;
     color: var(--color0);
-    z-index: 1;
+    z-index: 999;
     height: 90px;
     position: fixed;
     width: 100%;
@@ -311,14 +407,23 @@ nav.navbar a.tel i {
     position: relative;
     height: 100vh;
 }
+.banner-intern{background: url(../assets/business-team-office-worker-entrepreneur-concept.jpg);height: inherit;background-size: cover;display: flex;justify-content: center;align-items: center;padding: 0 12%;}
+.banner-intern.contact{background: url(../assets/keeping-informed-is-the-key-to-success.jpg);height: inherit;background-size: cover;background-position: center;}
 
+.banner-intern h1 {
+    font-size: 4rem;
+    color: var(--color0);
+    z-index: 9;
+    position: relative;
+    top: 45px;
+}
 .banner p {
     padding: 25px;
     font-size: 22px;
 }
 
 .banner h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     line-height: 1.2;
     color: var(--color0);
 }
@@ -381,7 +486,7 @@ header video {
 
 
 /* start main style */
-
+main{z-index: 1;}
 main .accroche {
     display: flex;
     grid-gap: 30px;
@@ -515,7 +620,7 @@ section#package .container .package-item .top h3 {
 
 section#about {
     display: flex;
-    padding: 4% 15%;
+    padding: 6% 15%;
     grid-gap: 40px;
 }
 
@@ -819,7 +924,7 @@ footer .bande1 {
     grid-gap: 30px;
 }
 
-footer .bande1 form {
+footer .bande1 #form {
     display: flex;
     justify-content: stretch;
     align-items: stretch;
@@ -832,7 +937,7 @@ footer .bande1 input {
     font-size: 18px;
     letter-spacing: 1px;
 }
-
+footer .bande1 form{display: flex;}
 footer .bande1 input.btn {
     width: auto;
     background: var(--color2);
